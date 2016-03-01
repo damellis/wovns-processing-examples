@@ -17,10 +17,10 @@ color backgroundColor = #050505; // Petrol
 // Draw one division of one repeat.
 void drawOne(PGraphics graphics)
 {
-  graphics.noStroke();
-  graphics.fill(#B83D4E); // Geranium  
-  graphics.ellipse(200, 200, 200, 200);
-  graphics.ellipse(1000, 200, 200, 200);
+  graphics.strokeWeight(84);
+  graphics.stroke(#B83D4E); // Geranium
+  graphics.line(0, 0, 1200, 2124);
+  graphics.line(1200, 0, 0, 2124);
 }
 
 void settings()
