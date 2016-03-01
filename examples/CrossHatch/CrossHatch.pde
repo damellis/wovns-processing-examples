@@ -1,5 +1,6 @@
 // Divan Quality, Landscape 1 Palette
 size(2400, 6372); // 13.5" x 36", 177 DPI
+noSmooth();
 
 background(#050406); // Black Satin
 stroke(#C2C2BF); // Pearl
