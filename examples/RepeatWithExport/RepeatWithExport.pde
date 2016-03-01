@@ -19,9 +19,8 @@ void drawOne(PGraphics graphics)
 {
   graphics.noStroke();
   graphics.fill(#B83D4E); // Geranium  
-  graphics.ellipse(20, 20, 5, 5);
-  graphics.ellipse(60, 110, 50, 50);
-  graphics.ellipse(40, 40, 5, 5);
+  graphics.ellipse(200, 200, 200, 200);
+  graphics.ellipse(1000, 200, 200, 200);
 }
 
 void settings()
@@ -37,18 +36,15 @@ void setup()
 
   pg.beginDraw();
   
-  // account for the difference in resolution between the screen and the saved image
-  pg.scale(SCALE, SCALE);  
-  
   background(backgroundColor); pg.background(backgroundColor); 
   
   for (int divideX = 0; divideX < X_DIVIDE; divideX++) {
     for (int divideY = 0; divideY < Y_DIVIDE; divideY++) {
       pg.pushMatrix();
       
-      pg.translate(pg.width / X_DIVIDE * divideX / SCALE, pg.height / Y_DIVIDE * divideY / SCALE);
+      pg.translate(pg.width / X_DIVIDE * divideX, pg.height / Y_DIVIDE * divideY);
       
-      pg.clip(0, 0, pg.width / X_DIVIDE / SCALE + 1, pg.height / Y_DIVIDE / SCALE + 1);
+      pg.clip(0, 0, pg.width / X_DIVIDE + 1, pg.height / Y_DIVIDE + 1);
 
       // draw to the saved image
       drawOne(pg);
@@ -66,6 +62,7 @@ void setup()
            width / X_REPEATS, height / Y_REPEATS / Y_DIVIDE * j);
     }
   }
+  
 
   for (int i = 0; i < X_REPEATS; i++) {
     for (int j = 0; j < Y_REPEATS; j++) {
@@ -83,6 +80,8 @@ void setup()
                     
           clip(0, 0, width / X_REPEATS / X_DIVIDE + 1, height / Y_REPEATS / Y_DIVIDE + 1);
           
+          scale(1.0 / SCALE, 1.0 / SCALE);
+
           // draw to the screen
           drawOne(g);
           
