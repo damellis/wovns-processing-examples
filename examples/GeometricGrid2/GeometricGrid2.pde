@@ -2,9 +2,10 @@
 size(2400, 6372); // 13.5" x 36", 177 DPI
 
 background(#6984B8); // Buscabulla
+noSmooth();
 noStroke();
-ellipseMode(CORNER); // to match the default rectMode()
 fill(#FFE4F3); // Pinking
+ellipseMode(CORNER); // to match the default rectMode()
 
 int w = width / 18;
 int h = height / 48;

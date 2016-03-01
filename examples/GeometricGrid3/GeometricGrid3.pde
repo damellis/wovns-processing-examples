@@ -2,6 +2,7 @@
 size(2400, 6372); // 13.5" x 36", 177 DPI
 
 background(#6984B8); // Buscabulla
+noSmooth();
 noStroke();
 fill(#FFE4F3); // Pinking
 

@@ -2,7 +2,7 @@
 
 size(3984, 3000);
 background(#DAE5F2);
-
+noSmooth();
 noStroke();
 
 int ystart = 0, xstart = 0; // the the value of x and y at the start of each row

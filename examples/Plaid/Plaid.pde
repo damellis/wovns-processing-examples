@@ -2,7 +2,7 @@
 
 size(3984, 3000); // 46-48" x 36" at 84 DPI
 background(#000500); // Black Feather
-
+noSmooth();
 noStroke();
 
 // Draw vertical stripes every three inches.

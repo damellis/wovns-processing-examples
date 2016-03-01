@@ -2,6 +2,7 @@
 size(3984, 3000); // 46-48" x 36", 84 DPI
 
 background(#FEFFF3); // Pale
+noSmooth();
 strokeWeight(16); // draw lines 16 pixels thick
 noFill();
 

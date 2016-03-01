@@ -2,6 +2,7 @@
 size(3984, 3000);
 
 background(#8B8795); // Suva
+noSmooth();
 noStroke();
 
 int w = 7, h = 7; // 1/12" x 1/12"

@@ -2,7 +2,7 @@
 
 size(3984, 3000); // dimensions in pixels (corresponds to 46-48" x 36" at 84 DPI)
 background(#D5C9D9); // draw the background (Pink Pearl)
-
+noSmooth();
 noStroke(); // don't draw outlines around shapes
 
 // Draw stripes at y = 0, 500, 1000, 1500, 2000, and 2500.
