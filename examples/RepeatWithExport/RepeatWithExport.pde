@@ -17,6 +17,16 @@ void settings()
   size(2400 / SCALE * X_REPEATS, 6372 / SCALE * Y_REPEATS);
 }
 
+// Draw one division of one repeat.
+void drawTo(PGraphics graphics)
+{
+  graphics.noStroke();
+  graphics.fill(#B83D4E); // Geranium  
+  graphics.ellipse(20, 20, 5, 5);
+  graphics.ellipse(60, 110, 50, 50);
+  graphics.ellipse(40, 40, 5, 5);
+}
+
 void setup()
 { 
   pg = createGraphics(2400, 6372);
@@ -27,19 +37,7 @@ void setup()
   
   // account for the difference in resolution between the screen and the saved image
   pg.scale(SCALE, SCALE);  
-}
-
-// Draw one division of one repeat.
-void drawTo(PGraphics graphics)
-{
-  graphics.noStroke();
-  graphics.fill(#B83D4E); // Geranium  
-  graphics.ellipse(20, 20, 5, 5);
-  graphics.ellipse(60, 110, 50, 50);
-}
-
-void draw()
-{
+  
   background(#050505); pg.background(#050505); // Petrol 
   
   for (int divideX = 0; divideX < X_DIVIDE; divideX++) {
@@ -93,11 +91,7 @@ void draw()
       popMatrix(); // restore coordinate system
     }
   }
-}
-
-void keyPressed()
-{
+  
   pg.endDraw();
   pg.save("repeat.png");
-  exit();
 }
