@@ -1,5 +1,7 @@
 // Divan Quality, Spectrum 19 Palette
 
+int WIDTH = 2400, HEIGHT = 6372;
+
 // how many copies of the final design file to show on the screen
 int X_REPEATS = 4;
 int Y_REPEATS = 2;
@@ -10,15 +12,10 @@ int Y_DIVIDE = 3;
 
 int SCALE = 18;
 
-PGraphics pg;
-
-void settings()
-{
-  size(2400 / SCALE * X_REPEATS, 6372 / SCALE * Y_REPEATS);
-}
+color backgroundColor = #050505; // Petrol
 
 // Draw one division of one repeat.
-void drawTo(PGraphics graphics)
+void drawOne(PGraphics graphics)
 {
   graphics.noStroke();
   graphics.fill(#B83D4E); // Geranium  
@@ -27,9 +24,14 @@ void drawTo(PGraphics graphics)
   graphics.ellipse(40, 40, 5, 5);
 }
 
+void settings()
+{
+  size(WIDTH / SCALE * X_REPEATS, HEIGHT / SCALE * Y_REPEATS);
+}
+
 void setup()
 { 
-  pg = createGraphics(2400, 6372);
+  PGraphics pg = createGraphics(WIDTH, HEIGHT);
 
   noSmooth(); pg.noSmooth();
 
@@ -38,7 +40,7 @@ void setup()
   // account for the difference in resolution between the screen and the saved image
   pg.scale(SCALE, SCALE);  
   
-  background(#050505); pg.background(#050505); // Petrol 
+  background(backgroundColor); pg.background(backgroundColor); 
   
   for (int divideX = 0; divideX < X_DIVIDE; divideX++) {
     for (int divideY = 0; divideY < Y_DIVIDE; divideY++) {
@@ -49,7 +51,7 @@ void setup()
       pg.clip(0, 0, pg.width / X_DIVIDE / SCALE + 1, pg.height / Y_DIVIDE / SCALE + 1);
 
       // draw to the saved image
-      drawTo(pg);
+      drawOne(pg);
       
       pg.popMatrix();
     }
@@ -82,7 +84,7 @@ void setup()
           clip(0, 0, width / X_REPEATS / X_DIVIDE + 1, height / Y_REPEATS / Y_DIVIDE + 1);
           
           // draw to the screen
-          drawTo(g);
+          drawOne(g);
           
           popMatrix();
         }
