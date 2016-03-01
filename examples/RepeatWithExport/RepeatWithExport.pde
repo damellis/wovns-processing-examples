@@ -17,7 +17,7 @@ color backgroundColor = #050505; // Petrol
 // Draw one division of one repeat.
 void drawOne(PGraphics graphics)
 {
-  graphics.strokeWeight(84);
+  graphics.strokeWeight(177);
   graphics.stroke(#B83D4E); // Geranium
   graphics.line(0, 0, 1200, 2124);
   graphics.line(1200, 0, 0, 2124);
