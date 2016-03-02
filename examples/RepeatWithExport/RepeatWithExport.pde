@@ -1,15 +1,17 @@
 // Divan Quality, Spectrum 19 Palette
 
+// the size of the generated image (should match the WOVNS quality)
 int WIDTH = 2400, HEIGHT = 6372;
 
-// how many copies of the final design file to show on the screen
-int X_REPEATS = 4;
-int Y_REPEATS = 2;
+// how many repeats of the generated image to show on-screen
+int X_REPEATS = 4; // match the number of horizontal repeats in the Divan quality
+int Y_REPEATS = 2; // show two yards vertically
 
-// how many times to sub-divide the final design file
+// how many times to sub-divide the generate image
 int X_DIVIDE = 2;
 int Y_DIVIDE = 3;
 
+// scale down the on-screen display by this much
 int SCALE = 18;
 
 color backgroundColor = #050505; // Petrol
