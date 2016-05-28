@@ -1,12 +1,12 @@
-// Talma, Eden 20 Colors
+// Talma, Pastel 11 Colors
 size(3984, 3000);
-background(#E8F0F7); // Fade
+background(#74AED7); // Ciel
 noSmooth();
 strokeWeight(20);
 noFill();
 
-color c1 = #8CC4CF; // Nalu
-color c2 = #FCF9CD; // Flavescent
+color c1 = #FFE4F3; // Pinking
+color c2 = #FEE597; // Yolk 
 int m=84;
 
 for (int y=0; y<height; y+=m) {
